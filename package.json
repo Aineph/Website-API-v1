@@ -1,0 +1,30 @@
+{
+  "name": "nf-api",
+  "private": true,
+  "version": "0.1.0",
+  "description": "The API for nicolasfez.com",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.1.8",
+    "@strapi/plugin-users-permissions": "4.1.8",
+    "@strapi/strapi": "4.1.8",
+    "better-sqlite3": "7.4.6"
+  },
+  "author": {
+    "name": "Nicolas Fez"
+  },
+  "strapi": {
+    "uuid": "2c993878-ff96-45ca-b29d-6f5aa8204a10"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
