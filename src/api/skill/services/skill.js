@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
 /**
  * skill service.
  */
 
-const { createCoreService } = require('@strapi/strapi').factories;
+const { createCoreService } = require("@strapi/strapi").factories;
 
-module.exports = createCoreService('api::skill.skill');
+module.exports = createCoreService("api::skill.skill");

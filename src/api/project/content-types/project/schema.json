@@ -4,7 +4,8 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "Project"
+    "displayName": "Project",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -21,7 +22,8 @@
           "localized": false
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
       "pluginOptions": {
@@ -29,7 +31,27 @@
           "localized": true
         }
       },
-      "type": "text"
+      "type": "text",
+      "required": true
+    },
+    "year": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "integer",
+      "required": true
+    },
+    "type": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": ["educational", "personal", "professional"],
+      "required": true
     },
     "link": {
       "pluginOptions": {
@@ -37,17 +59,17 @@
           "localized": false
         }
       },
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"],
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       }
     }

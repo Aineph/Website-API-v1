@@ -25,24 +25,33 @@
       "type": "string",
       "required": true
     },
-    "Section": {
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"],
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "slug": {
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
       },
-      "type": "enumeration",
-      "enum": [
-        "Tech",
-        "Music"
-      ],
+      "type": "string",
       "required": true
     },
-    "tags": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::tag.tag",
-      "inversedBy": "articles"
+    "excerpt": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
     },
     "content": {
       "pluginOptions": {
@@ -51,7 +60,25 @@
         }
       },
       "type": "richtext",
-      "required": false
+      "required": true
+    },
+    "tags": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "json"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
     }
   }
 }

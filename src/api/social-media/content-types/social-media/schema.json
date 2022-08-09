@@ -13,21 +13,22 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
+    },
+    "username": {
+      "type": "string",
+      "required": true
     },
     "link": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "logo": {
       "type": "media",
       "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
-    "username": {
-      "type": "string"
+      "required": true,
+      "allowedTypes": ["images"]
     }
   }
 }

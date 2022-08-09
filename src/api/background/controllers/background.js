@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
 /**
  *  background controller
  */
 
-const { createCoreController } = require('@strapi/strapi').factories;
+const { createCoreController } = require("@strapi/strapi").factories;
 
-module.exports = createCoreController('api::background.background');
+module.exports = createCoreController("api::background.background");
